@@ -1,5 +1,9 @@
 #!/bin/bash
-export REGISTRY_DATA_DIR=/data/offline-registry_data/docker/registry/v2
+# Delete offline registry images
+# Author: jyliu
+base_dir=$(cd `dirname $0` && pwd)
+cd $base_dir
+export REGISTRY_DATA_DIR=/data/offline-openshift-origin/offline-registry_data/docker/registry/v2
 
 imagename=$1
 
